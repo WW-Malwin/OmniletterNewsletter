@@ -13,14 +13,14 @@ class ConfigController extends Controller
         $apiKey = $config->get('OmniletterNewsletter.api_key');
         $apiUrl = $config->get('OmniletterNewsletter.api_url');
 
-        return $twig->render('OmniletterNewsletter::config', ['apiKey' => $apiKey, 'apiUrl' => $apiUrl]);
+        return $twig->render('OmniletterNewsletter::Configuration', ['apiKey' => $apiKey, 'apiUrl' => $apiUrl]);
     }
 
-    public function save(Request $request, ConfigRepository $config)
-    {
-        $config->set('OmniletterNewsletter.api_key', $request->input('apiKey'));
-        $config->set('OmniletterNewsletter.api_url', $request->input('apiUrl'));
+    public function save(Request $request, ConfigRepository $config, Twig $twig)
+{
+    $config->set('OmniletterNewsletter.api_key', $request->input('apiKey'));
+    $config->set('OmniletterNewsletter.api_url', $request->input('apiUrl'));
 
-        return $this->show($request, $config);
-    }
+    return $this->show($twig, $config);
+}
 }

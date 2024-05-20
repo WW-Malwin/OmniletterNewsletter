@@ -10,6 +10,5 @@ class OmniletterNewsletterRouteServiceProvider extends RouteServiceProvider
     {
         $router->get('config', 'OmniletterNewsletter\Controllers\ConfigController@show');
         $router->post('config', 'OmniletterNewsletter\Controllers\ConfigController@save');
-        $router->post('transfer', 'OmniletterNewsletter\Controllers\TransferController@transferSubscribers');
     }
 }
