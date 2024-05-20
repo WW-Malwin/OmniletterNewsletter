@@ -1,0 +1,13 @@
+{
+    "defaultEntryPoint" : "index.html",
+    "namespace"         : "OmniletterNewsletter",
+    "menuEntries"       : [
+      {
+        "label": "Newsletter Config",
+        "menu": "crm",
+        "urlKey": "config",
+        "entryPoint": "index.html"
+      }
+    ]
+  }
+  
