@@ -1,0 +1,16 @@
+{
+    "name": "OmniletterNewsletterTransfer",
+    "namespace": "OmniletterNewsletter",
+    "type": "plugin",
+    "version": "1.0.0",
+    "author": "Ihr Name",
+    "description": "Überträgt Newsletter-Empfängerdaten zu Omniletter",
+    "containers": [
+      {
+        "key": "OmniletterNewsletter.main",
+        "name": "Omniletter Newsletter Transfer",
+        "call": "OmniletterNewsletter\\Providers\\OmniletterNewsletterServiceProvider"
+      }
+    ]
+  }
+  
